@@ -10,9 +10,13 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import jakarta.annotation.PostConstruct;
 import jakarta.validation.Valid;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/app/products")
+@Tag(name = "Products", description = "Operations for managing products")
 public class ProductController {
 
     private final Map<Long, Product> products = new ConcurrentHashMap<>();
@@ -29,13 +33,15 @@ public class ProductController {
         products.put(product3.getId(), product3);
     }
 
+    @Operation(summary = "Get all products", description = "Returns a list of all products")
     @GetMapping
     public List<Product> getAllProducts() {
         return new ArrayList<>(products.values());
     }
 
+    @Operation(summary = "Get product by ID", description = "Returns one product by its ID")
     @GetMapping("/{id}")
-    public ResponseEntity<?> getProductById(@PathVariable Long id) {
+    public ResponseEntity<?> getProductById(@Parameter(description = "Product ID", example = "1") @PathVariable Long id) {
         Product product = products.get(id);
 
         if (product == null) {
@@ -45,6 +51,7 @@ public class ProductController {
         return ResponseEntity.ok(product);
     }
 
+    @Operation(summary = "Create product", description = "Creates a new product. Product data is sent in JSON format")
     @PostMapping
     public ResponseEntity<?> createProduct(@Valid @RequestBody Product product) {
         product.setId(currentId++);
@@ -53,8 +60,9 @@ public class ProductController {
         return ResponseEntity.status(HttpStatus.CREATED).body(product);
     }
 
+    @Operation(summary = "Update product", description = "Updates an existing product by its ID")
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateProduct(@PathVariable Long id, @Valid @RequestBody Product updatedProduct) {
+    public ResponseEntity<?> updateProduct(@Parameter(description = "Product ID", example = "1") @PathVariable Long id, @Valid @RequestBody Product updatedProduct) {
         Product existingProduct = products.get(id);
 
         if (existingProduct == null) {
@@ -70,8 +78,9 @@ public class ProductController {
         return ResponseEntity.ok(existingProduct);
     }
 
+    @Operation(summary = "Delete product", description = "Deletes a product by its ID")
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteProduct(@PathVariable Long id) {
+    public ResponseEntity<?> deleteProduct(@Parameter(description = "Product ID", example = "1") @PathVariable Long id) {
         Product product = products.remove(id);
 
         if (product == null) {

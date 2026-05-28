@@ -31,3 +31,19 @@
 ### 8. New file in project structure:
 
 <img width="1037" height="306" alt="image" src="https://github.com/user-attachments/assets/bee9e4fd-4448-48ff-b808-a5cb9c31f36e" />
+
+### 9. Swagger was added to the project to generate REST API documentation automatically.
+The Swagger UI is available at: http://localhost:8080/swagger-ui.html
+The OpenAPI JSON documentation is available at: http://localhost:8080/api-docs
+
+Swagger Product endpoints:
+
+<img width="1323" height="917" alt="image" src="https://github.com/user-attachments/assets/0ba09355-acbe-49bc-a01f-fe1056e489bb" />
+
+Swagger Get all products request:
+
+<img width="1294" height="906" alt="image" src="https://github.com/user-attachments/assets/a0d00e1e-371e-4020-93aa-d8e88131c3bb" />
+
+OpenAPI JSON:
+
+<img width="488" height="890" alt="image" src="https://github.com/user-attachments/assets/1650e7ea-692c-40c7-aa17-9b7e1b446a67" />

@@ -47,3 +47,31 @@ Swagger Get all products request:
 OpenAPI JSON:
 
 <img width="488" height="890" alt="image" src="https://github.com/user-attachments/assets/1650e7ea-692c-40c7-aa17-9b7e1b446a67" />
+
+### 10. Logs test:
+
+<img width="974" height="149" alt="image" src="https://github.com/user-attachments/assets/0fe9a169-1e23-4224-b200-9ba52c0f0f75" />
+
+### 11. New application logs file:
+
+<img width="974" height="547" alt="image" src="https://github.com/user-attachments/assets/34873222-9724-450f-8071-143dee3d3436" />
+
+### 12. FileUploadControllerTest:
+
+<img width="974" height="133" alt="image" src="https://github.com/user-attachments/assets/38844c40-344a-4a38-ba55-cc00d055694e" />
+
+### 13. ProductControllerTest:
+
+<img width="974" height="372" alt="image" src="https://github.com/user-attachments/assets/575f5c9b-fae9-42c8-854c-3fd8c644e19e" />
+
+### 14. ProductTest:
+
+<img width="974" height="96" alt="image" src="https://github.com/user-attachments/assets/f5e3513a-f06d-4b83-af09-00f8147784a7" />
+
+### 15. ProductValidationTest:
+
+<img width="974" height="75" alt="image" src="https://github.com/user-attachments/assets/d69fb770-ab0b-4639-8cb3-5e28386f9e34" />
+
+### 16. Test coverage:
+
+<img width="974" height="239" alt="image" src="https://github.com/user-attachments/assets/e390eb3d-402c-497f-866f-dde3e098ae30" />
